@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Sidebar from "@/components/Sidebar";
 import WorkGrid from "@/components/WorkGrid";
 import Lightbox from "@/components/Lightbox";
 import { ProjectCategory } from "@/data/projects";
 import { useSearchParams } from "next/navigation";
 
-export default function Home() {
+function HomeContent() {
   const searchParams = useSearchParams();
   const filterParam = searchParams.get("filter") as ProjectCategory | "All" | null;
   
@@ -27,5 +27,13 @@ export default function Home() {
       </div>
       <Lightbox />
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={null}>
+      <HomeContent />
+    </Suspense>
   );
 }
