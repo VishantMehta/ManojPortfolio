@@ -19,7 +19,7 @@ export default function WorkGrid({ activeCategory }: Props) {
     <div className="w-full h-full min-h-screen pt-24 lg:pt-0 lg:pl-60">
       <motion.div
         layout
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px]"
+        className="grid grid-cols-3 lg:grid-cols-4 gap-1 md:gap-[6px]"
       >
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project, index) => (

@@ -17,19 +17,19 @@ export default function PlaceholderArt({ title, wordmarkStyle }: Props) {
     >
       {/* Wordmark styling based on type */}
       {wordmarkStyle === "bold-caps" && (
-        <h3 className="font-display font-black text-4xl md:text-5xl lg:text-7xl text-white text-center uppercase tracking-tighter leading-none drop-shadow-md opacity-90 mix-blend-overlay">
+        <h3 className="font-display font-black text-2xl md:text-4xl lg:text-7xl text-white text-center uppercase tracking-tighter leading-none drop-shadow-md opacity-90 mix-blend-overlay">
           {title}
         </h3>
       )}
 
       {wordmarkStyle === "script" && (
-        <h3 className="font-[var(--font-playfair)] italic text-5xl md:text-6xl text-white text-center capitalize tracking-normal font-light drop-shadow-lg scale-110">
+        <h3 className="font-[var(--font-playfair)] italic text-3xl md:text-5xl lg:text-6xl text-white text-center capitalize tracking-normal font-light drop-shadow-lg scale-110">
           {title.toLowerCase()}
         </h3>
       )}
 
       {wordmarkStyle === "colored-block" && (
-        <h3 className="font-display font-black text-6xl md:text-8xl uppercase tracking-tighter text-[#D6DE43] drop-shadow-md opacity-90 scale-y-110 mix-blend-lighten">
+        <h3 className="font-display font-black text-3xl md:text-6xl lg:text-8xl uppercase tracking-tighter text-[#D6DE43] drop-shadow-md opacity-90 scale-y-110 mix-blend-lighten">
           {title}
         </h3>
       )}
